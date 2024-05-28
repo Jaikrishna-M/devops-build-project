@@ -1,19 +1,13 @@
 pipeline {
     agent any
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
-            }
-        }
-        stage('build') {
-            steps {
-                echo 'Build Stage'
-            }
-        }
-        stage('deploy') {
-            steps {
-                echo 'deploy stage'
+                // Grant executable permissions to the build script
+                chmod +x build.sh
+                // Build the Docker image using the build script
+                sh './deploy.sh'
+                echo 'Build executed Successfully'
             }
         }
     }
