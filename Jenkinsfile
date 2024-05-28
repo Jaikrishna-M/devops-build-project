@@ -12,7 +12,7 @@ pipeline {
                 sh 'chmod +x deploy.sh'
                 echo 'deploy.sh is now script file'
                 sh './deploy.sh'
-                echo 'Deploy executed Successfully'
+                echo 'Deploy executed Successfully in pipeling Script'
             }
         }
     }
