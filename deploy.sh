@@ -5,8 +5,9 @@ if [[ $GIT_BRANCH == "origin/development" ]]; then
         docker push jaikrishnam/development
         
 if [[ $GIT_BRANCH == "origin/prod" ]]; then
-        docker tag my-react jaikrishnam/production
-        docker push jaikrishnam/main
+        docker tag my-react jaikrishnam/prod
+        docker push jaikrishnam/prod
+        
 else
         echo "failed"
 fi
