@@ -4,7 +4,7 @@ if [[ $GIT_BRANCH == "origin/development" ]]; then
         docker tag my-react jaikrishnam/development
         docker push jaikrishnam/development
         
-elif [[ $GIT_BRANCH == "origin/prod" ]]; then
+elif [[ $GIT_BRANCH == "origin/main" ]]; then
         docker tag my-react jaikrishnam/prod
         docker push jaikrishnam/prod
         
