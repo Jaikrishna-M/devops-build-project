@@ -1,10 +1,16 @@
 #!/bin/bash
 
+# Get the latest commit hash of main branch
+main_latest_commit=$(git rev-parse origin/main)
+
+# Get the common ancestor of development and main branches
+common_ancestor=$(git merge-base origin/development origin/main)
+
 if [[ $GIT_BRANCH == "origin/development" ]]; then
         docker tag my-react jaikrishnam/development
         docker push jaikrishnam/development
         
-elif [[ $GIT_BRANCH == "origin/main" ]]; then
+elif [[ $common_ancestor == $main_latest_commit ]]; then
         docker tag my-react jaikrishnam/prod
         docker push jaikrishnam/prod
         
