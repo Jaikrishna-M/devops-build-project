@@ -1,6 +1,6 @@
 version: '2'
 services:
-  capstone:
+  projects:
     image: my-react:latest
     ports:
-      - '80:8000'
+      - '80:8081'
