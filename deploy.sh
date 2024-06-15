@@ -1,6 +1,7 @@
 #!/bin/bash
 
 docker-compose up -d
+
 # Get the latest commit hash of main branch
 main_latest_commit=$(git rev-parse origin/main)
 
