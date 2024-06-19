@@ -1,0 +1,6 @@
+version: '2'
+services:
+  projects:
+    image: my-react:latest
+    ports:
+      - '80:80'
